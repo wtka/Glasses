@@ -11,7 +11,7 @@ current: index
     <h3>看得清，才能看得遠</h3>
   </div>
 </div>
-<div class="about">
+<div class="about p-y">
   <h2 class="title">用專業的心，做專業的事</h2>
   <ul class="about-list container">
     <li>
@@ -36,7 +36,7 @@ current: index
     </li>
   </ul>
 </div>
-<div class="classic container">
+<div class="classic container p-y">
   <h2 class="title">經典系列鏡框</h2>
   <div class="classic-list">
     <img src="./assets/images/product-1.png" alt="product-1" class="photo">
@@ -60,9 +60,9 @@ current: index
     </div>    
   </div>
 </div>
-<div class="co-branding">
+<div class="co-branding p-y">
   <h2 class="title">聯名設計鏡框</h2>
-  <ul class="co-branding-list container">
+  <ul class="co-branding-list container p-y-2">
     <li class="co-branding-double">
       <h2>Double A+</h2>
     </li>
@@ -70,4 +70,64 @@ current: index
       <h2>YOUTH</h2>
     </li>
   </ul>
+</div>
+<div class="customer p-y">
+    <h2 class="title">顧客推薦</h2>
+    <ul class="customer-list cotainer p-y-2">
+      <li>
+        <img src="./assets/images/rec-1.png" alt="rec-1">
+        <p class="customer-list-title p-x p-y-1">Jessy</p>
+        <p class="customer-list-recommend p-x">眼鏡品質優良，下次還會想來這邊購買!</p>
+        <p class="customer-list-date p-x">2021/06/20</p>
+      </li>
+      <li>
+        <img src="./assets/images/rec-2.png" alt="rec-2">
+        <p class="customer-list-title p-x p-y-1">凱倫</p>
+        <p class="customer-list-recommend p-x">做工細緻、鏡架很輕盈，戴久也不會覺得有負擔，推薦給大家!</p>
+        <p class="customer-list-date p-x">2021/04/18</p>
+      </li>
+      <li>
+        <img src="./assets/images/rec-3.png" alt="rec-3">
+        <p class="customer-list-title p-x p-y-1">悠悠</p>
+        <p class="customer-list-recommend p-x">謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購!</p>
+        <p class="customer-list-date p-x">2020/12/25</p>
+      </li>
+      <li>
+        <img src="./assets/images/rec-4.png" alt="rec-4">
+        <p class="customer-list-title p-x p-y-1">Kyuan</p>
+        <p class="customer-list-recommend p-x">服務很好，品質沒有任何問題，非常喜歡。</p>
+        <p class="customer-list-date p-x">2020/10/31</p>
+      </li>
+    </ul>
+</div>
+<div class="contact p-y">
+  <div class="contact-info container">
+    <h2 class="title">聯絡我們</h2>
+    <p>我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
+    <form action="">
+      <div class="form-group">
+        <label for="name">姓名</label>
+        <input type="text" id="name" class="form-input" name="name" placeholder="陳小明">
+      </div>
+      <div class="form-group">
+        <label for="tel">聯絡電話</label>
+        <input type="tel" id="tel" class="form-input" name="tel" placeholder="0912-345-678">
+      </div>
+      <div class="form-group">
+        <label for="email">電子郵件</label>
+        <input type="email" id="email" class="form-input" name="email" placeholder="example@email.com">
+      </div>
+      <div class="form-group">
+        <label for="react">意見反映</label>
+        <textarea type="text" id="react" placeholder="請輸入您的意見..."></textarea>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="agree" name="agree" value="agree">
+        <label for="agree">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+      </div>
+      <div class="btn-confirm">
+        <button type="submit">確認送出</button>
+      </div>
+    </form>
+  </div>  
 </div>

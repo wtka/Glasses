@@ -17,4 +17,9 @@
     li {
         margin-left: 44px;
     }        
+    a {
+        &:hover {
+            color: $hover-link;
+        } 
+    }
 }
