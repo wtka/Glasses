@@ -1,0 +1,99 @@
+.banner {    
+    height: 840px;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    text-align: right;
+    color: $text-darkRed;   
+
+    h5 {
+        font-size: 36px;
+    }
+    h3 {
+        font-size: 64px;
+        font-weight: bold;
+    }
+}
+
+.about {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background-color: $about-bc;
+}
+
+.about-list {
+    display: flex;
+    margin-top: 48px;
+
+    li {
+        max-width: 255px;
+        height: 201px;
+        text-align: center;
+
+        img {
+            @include img-size(84px, 84px);
+        }
+        h3 {
+            margin-top: 24px;
+            color: $text-darkRed;
+            font-size: 24px;
+            font-weight: bold;            
+        }
+        p {
+            text-align: left;
+            margin-top: 8px;
+        }
+    }
+}
+
+.classic {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.classic-list {
+    display: flex;
+    margin-bottom: 32px;    
+    &:nth-child(odd) {
+        flex-direction: row-reverse;
+        .classic-product {
+            margin-right: 30px;
+        }        
+    }
+}
+
+.photo {
+    width: 635px;
+}
+
+.classic-product {
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-right: 10px;
+        margin-left: 32px;
+        @include img-size(32px, 32px);
+    }
+    h4 {
+        font-size: 48px;
+        color: $text-red;
+        font-weight: bold;
+    }
+}
+
+.co-brading {
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

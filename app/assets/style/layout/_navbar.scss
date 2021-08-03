@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $text-red;
+    padding: 30px 88px;
+}
+
+.logo a {
+    display: block;
+    background-image: url(../images/logo.png);
+    @include img-size(80px, 49px);    
+}
+
+.nav {
+    display: flex;
+    li {
+        margin-left: 44px;
+    }        
+}
