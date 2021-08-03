@@ -1,2 +1,203 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  line-height: 1.5;
+  font-family: "Pan-CJK", "sans-serif"; }
+
+img {
+  vertical-align: middle;
+  height: auto; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+.container {
+  width: 1110px;
+  margin: 0 auto; }
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #650300;
+  text-align: center; }
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #aa0601;
+  padding: 30px 88px; }
+
+.logo a {
+  display: block;
+  background-image: url(../images/logo.png);
+  width: 80px;
+  height: 49px; }
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .nav li {
+    margin-left: 44px; }
+
+.banner {
+  height: 840px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../images/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.slogan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: right;
+  color: #650300; }
+  .slogan h5 {
+    font-size: 36px; }
+  .slogan h3 {
+    font-size: 64px;
+    font-weight: bold; }
+
+.about {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background-color: #aa06010d; }
+
+.about-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 48px; }
+  .about-list li {
+    max-width: 255px;
+    height: 201px;
+    text-align: center; }
+    .about-list li img {
+      width: 84px;
+      height: 84px; }
+    .about-list li h3 {
+      margin-top: 24px;
+      color: #650300;
+      font-size: 24px;
+      font-weight: bold; }
+    .about-list li p {
+      text-align: left;
+      margin-top: 8px; }
+
+.classic {
+  padding-top: 60px;
+  padding-bottom: 80px; }
+
+.classic-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 32px; }
+  .classic-list:nth-child(odd) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
+    .classic-list:nth-child(odd) .classic-product {
+      margin-right: 30px; }
+
+.photo {
+  width: 635px; }
+
+.classic-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .classic-product img {
+    margin-right: 10px;
+    margin-left: 32px;
+    width: 32px;
+    height: 32px; }
+  .classic-product h4 {
+    font-size: 48px;
+    color: #aa0601;
+    font-weight: bold; }
+
+.co-brading {
+  background-image: url(../images/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 /*# sourceMappingURL=all.css.map */
