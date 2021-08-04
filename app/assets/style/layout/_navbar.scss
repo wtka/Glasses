@@ -4,22 +4,25 @@
     justify-content: space-between;
     background-color: $text-red;
     padding: 30px 88px;
-}
-
-.logo a {
-    display: block;
-    background-image: url(../images/logo.png);
-    @include img-size(80px, 49px);    
-}
-
-.nav {
-    display: flex;
-    li {
-        margin-left: 44px;
-    }        
-    a {
-        &:hover {
-            color: $hover-link;
-        } 
+    @include pad {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .logo a {
+        display: block;
+        background-image: url(../images/logo.png);
+        @include img-size(80px, 49px);  
+    }    
+    .nav {
+        display: flex;
+        li {
+            margin-left: 44px;
+        }        
+        a {
+            &:hover {
+                color: $hover-link;
+            } 
+        }
     }
 }
+

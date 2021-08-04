@@ -1,6 +1,10 @@
 .container {
     width: 1110px;
-    margin: 0 auto;    
+    margin: 0 auto;   
+
+    @include pad {
+        width: 90%;
+    }
 }
 
 .title {
@@ -8,4 +12,8 @@
     font-weight: bold;
     color: $text-darkRed;
     text-align: center; 
+
+    @include pad {
+        font-size: $text-sm;
+    }
 }
