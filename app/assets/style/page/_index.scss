@@ -15,22 +15,22 @@
         text-align: right;
         color: $text-darkRed;       
         h5 {
-            font-size: $text-mm;            
+            font-size: $text-xm;            
             @include pad {
-                font-size: $text-ms;                
+                font-size: $text-ls;                
             }
             @include mobile {
                 font-size: $text-base;                
             }
         }
         h3 {
-            font-size: $text-ml;
+            font-size: $text-ll;
             font-weight: bold;
             @include pad {
-                font-size: $text-lm;                
+                font-size: $text-ml;                
             }
             @include mobile {
-                font-size: $text-sm;              
+                font-size: $text-lm;              
             }
         }
     }
@@ -69,7 +69,7 @@
             h3 {
                 margin-top: 24px;
                 color: $text-darkRed;
-                font-size: $text-ls;
+                font-size: $text-xs;
                 font-weight: bold;                      
             }
             p {
@@ -172,15 +172,15 @@
             transform: translate(-50%, -50%);                
         }                  
         h4 {
-            font-size: $text-lm;
+            font-size: $text-ml;
             color: $text-red;
             font-weight: bold;    
             margin-left: 10px;    
             @include pad {
-                font-size: $text-xs;
+                font-size: $text-sm;
             }
             @include mobile {
-                font-size: $text-xs;
+                font-size: $text-sm;
             }
         }
     }            
@@ -224,11 +224,11 @@
             justify-content: center;
             align-items: center;    
             h2 {
-                font-size: $text-ll;
+                font-size: $text-xl;
                 font-weight: bold;
                 color: $text-red;
                 @include pad {
-                    font-size: $text-sm;
+                    font-size: $text-lm;
                 }
             }
         }
@@ -282,14 +282,14 @@
             }            
         }
         .customer-list-title {
-            font-size: $text-ss;  
+            font-size: $text-ms;  
             padding-top: 14px;
             padding-bottom: 7px; 
         }                
         .customer-list-date {
             position: absolute;
             bottom: 15px;
-            font-size: $text-ss;
+            font-size: $text-ms;
             color: #707070;
         }
     }
@@ -322,7 +322,7 @@
             }          
         }
         p {
-            font-size: $text-ms;
+            font-size: $text-ls;
             margin-bottom: 20px;
             @include pad {
                 margin-bottom: 16px;
@@ -343,7 +343,7 @@
         label {
             font-size: $text-base;
             @include pad {
-                font-size: $text-ss;
+                font-size: $text-ms;
             } 
         } 
         input, textarea {
@@ -370,7 +370,7 @@
         }
         label {
             @include mobile {
-                font-size: $text-ss;
+                font-size: $text-ms;
             }
         }
     }    

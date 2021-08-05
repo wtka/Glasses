@@ -7,17 +7,21 @@
 }
 
 .title {
-    font-size: $text-lm;
+    font-size: $text-ml;
     font-weight: bold;
     color: $text-darkRed;
     text-align: center; 
     margin-bottom: 40px;
     @include pad {
-        font-size: $text-sm;
+        font-size: $text-lm;
         margin-bottom: 32px;
     }
     @include mobile {
-        font-size: $text-ms;
+        font-size: $text-ls;
         margin-bottom: 20px;
     }
+}
+
+.hide {
+    display: none;
 }

@@ -22,6 +22,7 @@
             }        
         }
         a {
+            color: $text-white;
             padding-top: 12px;
             padding-bottom: 12px;
             display: block;
@@ -53,14 +54,15 @@
             }
             a {
                 display: block;
-                font-size: $text-mm;
+                font-size: $text-xm;
+                color: $text-white;
                 margin-left: 22px;
                 @include pc-pad {
-                    font-size: $text-ms;
+                    font-size: $text-ls;
                     margin-left: 11px;
                 }
                 @include pad {
-                    font-size: $text-ms;
+                    font-size: $text-ls;
                     margin-left: 6px;
                 }               
                 &:hover {
@@ -134,7 +136,8 @@
                 }
                 a {
                     display: block;
-                    font-size: $text-ss;
+                    font-size: $text-ms;
+                    color: $text-white;
                     &:hover {
                         color: $hover-link;
                     }

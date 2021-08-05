@@ -1,0 +1,159 @@
+.glasses-header {
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        .toggle {
+            &:hover {
+                border-bottom: 8px solid $text-red;
+                @include mobile {
+                    border-bottom: 4px solid $text-red;
+                }
+            }            
+        }
+        li {
+            border: 1px solid #dcdcdc;
+            img {
+                margin-right: 10px;
+                @include img-size(44px, 44px);
+                @include pad {
+                    @include img-size(30px, 30px);
+                }
+                @include mobile {
+                    margin-right: 2px;
+                    @include img-size(15px, 15px);                    
+                }
+            }
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $text-black;
+                font-size: $text-lm;
+                padding-top: 27px;
+                padding-bottom: 19px;
+                &:hover {
+                    background-color: $hover-link;
+                }
+                @include pad {
+                    font-size: $text-xs;
+                    padding: 14px 0;
+                }
+                @include mobile {
+                    font-size: $text-ms;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }    
+}
+
+.glasses-banner {
+    display: flex;
+}
+
+.glasses-product {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 160px;
+    @include pad {
+        padding-top: 56px;
+        padding-bottom: 96px;
+    }
+      @include mobile {
+        padding-top: 32px;
+        padding-bottom: 56px;
+    }
+    h2 {
+        font-size: $text-sl;
+        @include pad {
+            font-size: $text-lm;
+        }
+          @include mobile {
+            font-size: $text-ls;
+        }
+    }
+    h3 {
+        font-size: $text-lm;
+        margin-bottom: 40px;
+        @include pad {
+            font-size: $text-xs;
+            margin-bottom: 32px;
+        }
+        @include mobile {
+            font-size: $text-base;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.glasses-product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;      
+    .optical {
+        width: 24%;
+        @include pad {
+            width: 48%;
+        }
+        @include mobile {
+            width: 98%;
+        }
+        img {
+            @include img-size(100%, 164px);
+        }
+    }
+    .sunglasses {
+        width: 30%;
+        @include pad {
+            width: 48%;
+        }
+        @include mobile {
+            width: 98%;
+        }
+        img {
+            @include img-size(100%, 224px);
+        }
+    }
+    .glasses-card {
+        margin-bottom: 104px;
+        @include pad {
+            margin-bottom: 72px;            
+        }
+        @include pad {
+            margin-bottom: 32px;            
+        }
+        .glasses-card-title {
+            display: flex;
+            justify-content: space-between;
+            font-size: $text-xs;
+            @include mobile {
+                font-size: $text-base;
+            }
+            p {
+                color: $text-red;
+            }
+        }
+        .glasses-card-square {
+            display: flex;
+            .square-color {
+                @include img-size(24px, 24px);
+                @include mobile {
+                    @include img-size(17px, 16px);
+                }
+                border-radius: 4px;
+                background-color: $square-color-primary;
+                &:last-of-type {
+                    margin-left: 8px;
+                    @include mobile {
+                        margin-left: 4px;
+                    }
+                    background-color: $square-color-secondary;
+                }
+                a {
+                    display: block;
+                    opacity: 0;
+                }    
+            }     
+        }        
+    }
+}

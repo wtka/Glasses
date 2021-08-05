@@ -1,0 +1,21 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    .page-item {
+        background: $text-white;
+        border: 1px solid $page-border-color;
+        a {            
+            display: block;
+            font-size: 18px;
+            color: $page-border-color;
+            padding: 11px 12px;
+            &:hover {
+                color: $text-white;
+                background: $text-black;
+            }
+            @include mobile {
+                font-size: $text-ss;                
+            }
+        }
+    }
+}
