@@ -1,7 +1,15 @@
 "use strict";
 
-console.log('Hello!');
 $(document).ready(function () {
-  console.log('HesSchool Hello!');
+  var $li = $('.glasses-header .menu li a');
+  $li.click(function (event) {
+    if ($(this).attr('href') == '#glasses-optical') {
+      $('#glasses-sunglasses').css('display', 'none');
+      $('#glasses-optical').css('display', 'block');
+    } else if ($(this).attr('href') == '#glasses-sunglasses') {
+      $('#glasses-optical').css('display', 'none');
+      $('#glasses-sunglasses').css('display', 'block');
+    }
+  });
 });
 //# sourceMappingURL=all.js.map
