@@ -21,7 +21,8 @@
     .logo a {
         display: block;
         background-image: url(../images/logo.png);
-        @include img-size(80px, 49px);          
+        @include img-size(80px, 49px);  
+        @include background-type;
         @include mobile {
             @include img-size(48px, 29px);
             background-size: contain;

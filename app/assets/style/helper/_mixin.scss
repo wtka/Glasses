@@ -21,6 +21,13 @@
     }
 }
 
+@mixin background-type {
+    text-indent: -99999px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
 @mixin pad-p-y {
 	padding-top: 40px;
 	padding-bottom: 56px;
