@@ -3,9 +3,16 @@
     .footer-info {
         display: flex;
         justify-content: space-between;  
+        padding-top: 32px;
+        @include mobile {
+            padding-top: 24px;
+        }
     }    
     .footer-nav {
         display: flex;
+        @include mobile {
+            display: none;
+        }
         li {
             & ~ li {
                 padding-left: 48px;
@@ -15,8 +22,8 @@
             }        
         }
         a {
-            padding-top: 44px;
-            padding-bottom: 42px;
+            padding-top: 12px;
+            padding-bottom: 12px;
             display: block;
             &:hover {
                 color: $hover-link;
@@ -24,32 +31,38 @@
         }
     }    
     .footer-contact {
+        @include pad {
+            padding-top: 6px;
+            padding-bottom: 20px;
+        }
         li {
             display: flex;
-            align-items: center;
-            
-            &:nth-child(1) {
-                img {
-                    margin-right: 10px;  
-                    @include pad {
-                        margin: 0px;
-                    }                  
-                }            
-            }
+            align-items: center;  
             & ~ li {
                 margin-top: 16px;
             }
+            @include pc-pad {
+                & ~ li {
+                  margin-top: 12px;
+                }
+            }                      
             img {
                 @include pad {
                     @include img-size(24px, 24px);
                 }
             }
             a {
+                display: block;
                 font-size: $text-mm;
+                margin-left: 22px;
+                @include pc-pad {
+                    font-size: $text-ms;
+                    margin-left: 11px;
+                }
                 @include pad {
                     font-size: $text-ms;
-                }
-                margin-left: 22px;
+                    margin-left: 6px;
+                }               
                 &:hover {
                     color: $hover-link;
                 }
@@ -57,10 +70,8 @@
         }
     }    
     .footer-icon {
-        display: flex;
-        padding-top: 32px;
-        li {
-            margin-left: 24px;
+        display: flex;                
+        li {            
             img {
                 transition: all 0.5s;
                 @include pad {
@@ -69,27 +80,58 @@
                 &:hover {
                     transform: scale(1.2);
                 }
-            }                
+            }      
+            & ~ li {
+                margin-left: 32px;
+            }   
+            @include pad {
+                & ~ li {
+                  margin-left: 24px;
+                }
+            }       
         }
     }    
     .copyright {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 24px;
         padding-top: 32px;
         padding-bottom: 39px;
-        border-top: solid 1px $text-white;    
+        border-top: solid 1px $text-white; 
+        @include pad {
+            padding-top: 24px;
+            padding-bottom: 32px;
+        }  
+        @include mobile {
+            display: block;
+            padding: 16px 0;
+        } 
         p {
             color: $text-white;
         }
         ul {
             display: flex;
+            @include mobile {
+                display: block;
+            }
             li {
                 margin-left: 48px;  
                 @include pad {
                     margin-left: 24px;  
                 }          
+                @include mobile {
+                    margin: 8px 0;
+                }                
+                @include pad {
+                    & ~ li {
+                      margin-left: 24px;
+                    }
+                }
+                @include mobile {
+                    & ~ li {
+                      margin-left: 0;
+                    }
+                }
                 a {
                     display: block;
                     font-size: $text-ss;

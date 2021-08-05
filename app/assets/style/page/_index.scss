@@ -1,121 +1,189 @@
 .banner {    
     height: 840px;
-    display: flex;
-    align-items: center;
     background-image: url(../images/banner.png);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    @include pad {
-        background-image: url(../images/banner-sm.png);
-    }
-
+    @include mobile {       
+        height: 394px;
+        background-image: url(../images/banner-sm.png);   
+    }   
     .slogan {
+        height: 100%;
         display: flex;
         flex-direction: column;    
         justify-content: center;
         text-align: right;
-        color: $text-darkRed;   
-    
+        color: $text-darkRed;       
         h5 {
-            font-size: $text-mm;
+            font-size: $text-mm;            
             @include pad {
-                font-size: $text-ms;
-                padding-right: 40px;
+                font-size: $text-ms;                
+            }
+            @include mobile {
+                font-size: $text-base;                
             }
         }
         h3 {
             font-size: $text-ml;
             font-weight: bold;
             @include pad {
-                font-size: $text-lm;
-                padding-right: 40px;
+                font-size: $text-lm;                
+            }
+            @include mobile {
+                font-size: $text-sm;              
             }
         }
     }
 }
 
-.about {
-    background-color: $bc;
+.about {    
     @include pad {
        @include pad-p-y;
     }
-
+    @include mobile {
+        @include mobile-p-y;
+    }   
+    background-color: $bc;
     .about-list {
         display: flex;
         justify-content: space-around;
         margin-top: 48px;
-        @include pad {
-            margin-top: 40px;
+        @include pc-pad {
             flex-wrap: wrap;
+            margin-top: 0px;
         }
-    
         li {
-            max-width: 255px;
-            height: 201px;
+            width: 23%;
             text-align: center;
-            @include pad {
-                max-width: 48%;
+            @include pc-pad {
+                width: 40%;
+                margin-top: 40px;
             }
-    
+            @include mobile {
+                width: 70%;
+            }    
             img {
+                margin: 0 auto;
                 @include img-size(84px, 84px);
             }
             h3 {
                 margin-top: 24px;
                 color: $text-darkRed;
                 font-size: $text-ls;
-                font-weight: bold;            
+                font-weight: bold;                      
             }
             p {
                 text-align: left;
-                margin-top: 8px;
+                margin-top: 8px;                
             }
         }
     }
 }
 
-.classic-list {
-    display: flex;
-    margin-top: 32px;      
-    &:nth-child(odd) {
-        flex-direction: row-reverse;
-        .classic-product {
-            margin-right: 30px;
-        }        
-    }
-    .photo {
-        width: 635px;
-    }
+.classic {
     @include pad {
-        margin-top: 8px;
-        &:nth-child(odd) {
-            flex-direction: row;
-        }
-        .photo {            
-            @include img-size(390px, 168px);
-        }
+        @include pad-p-y;
     }
-
-    .classic-product {
-        display: flex;
-        align-items: center;
-    
-        img {
-            margin-right: 10px;
-            margin-left: 32px;
-            @include img-size(32px, 32px);        
+    @include mobile {
+        @include mobile-p-y;
+    }    
+    .classic-list {
+        display: flex;        
+        @include mobile {
+            display: block;
+            position: relative;
+        }             
+        &:nth-child(odd) {
+            flex-direction: row-reverse;              
         }
-        h4 {
-            font-size: $text-lm;
-            color: $text-red;
-            font-weight: bold;
-    
-            @include pad {
-                font-size: $text-xs;
+        &:nth-child(even) {
+            .classic-product:nth-child(even) {
+                margin-left: 30px;
+            }
+        }
+        &:nth-child(odd) {
+            .classic-product:nth-child(even) {
+                margin-right: 30px;
+            }
+        }
+        & ~ .classic-list {
+            margin-top: 30px;
+        }
+        .photo {
+            width: 635px;
+        }
+        .star {
+            @include img-size(50px, 50px);
+        }
+        @include pc-pad {
+            .photo {
+              width: 55%;
+            }
+        }
+        @include pad {
+            &:nth-child(odd) {
+              flex-direction: row;
+            }
+            &:nth-child(odd) {
+              .classic-product:nth-child(even) {
+                margin-left: 30px;
+              }
+            }
+            &:nth-child(odd) {
+              .classic-product:nth-child(even) {
+                margin-right: 0px;
+              }
+            }
+            & ~ .classic-list {
+              margin-top: 8px;
+            }
+            .photo {
+              @include img-size(390px, 168px);
+            }            
+        }
+        @include mobile {
+            &:nth-child(even) {
+              .classic-product:nth-child(even) {
+                margin: 0;
+              }
+            }
+            &:nth-child(odd) {
+              .classic-product:nth-child(even) {
+                margin: 0;
+              }
+            }
+            &:nth-child(odd) {
+              .classic-product:nth-child(even) {
+                margin-right: 30px;
+              }
+            }
+            .photo {
+              margin: 0 auto;
             }
         }
     }    
+    .classic-product {
+        display: flex;
+        align-items: center;  
+        @include mobile {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);                
+        }                  
+        h4 {
+            font-size: $text-lm;
+            color: $text-red;
+            font-weight: bold;    
+            margin-left: 10px;    
+            @include pad {
+                font-size: $text-xs;
+            }
+            @include mobile {
+                font-size: $text-xs;
+            }
+        }
+    }            
 }
 
 .co-branding {       
@@ -125,16 +193,30 @@
     @include pad {
         @include pad-p-y;
     }
+    @include mobile {
+        @include mobile-p-y;
+    }
     .title {        
         color: $text-white;
     }        
     .co-branding-list {
         display: flex;
-        justify-content: space-between;        
+        justify-content: space-between;  
+        @include mobile {
+            flex-wrap: wrap;
+            justify-content: center;
+        }      
         li {
             @include img-size(540px, 455px);
+            @include pc-pad {
+                width: 48%;
+            }
             @include pad {
                 @include img-size(48%, 278px);
+            }
+            @include mobile {
+                @include img-size(345px, 291px);
+                margin-top: 16px;               
             }
             background-size: cover;
             background-position: center;
@@ -151,44 +233,58 @@
             }
         }
     }
-    .co-branding-double {
+    .co-branding-double {        
         @include blend-mask(url(../images/product-8.png));  
+        @include mobile {
+            background-color:transparent;
+            background-image: url(../../assets/images/product-8.png);
+        }
     }    
     .co-branding-youth {
-        @include blend-mask(url(../images/product-9.png));    
+        @include blend-mask(url(../images/product-9.png));   
+        @include mobile {
+            background-color:transparent;
+            background-image: url(../../assets/images/product-9.png);
+        } 
     }
 }
 
 .customer {  
     @include pad {
-        @include pad-p-y;
+        @include pad-p-y-1;
     }
     .customer-list {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         @include pad {
             flex-wrap: wrap;
-        }
+        }       
         li {           
             @include img-size(255px, 460px); 
             border: 1px solid #dee2e6;
             border-radius: 4px;
             box-shadow: 0px 2px 6px #00000029;  
-            position: relative;   
-            margin-right: 30px;  
-            
-            img {
-                @include img-size(255px, 256px); 
-            }
-            @include pad {                
+            position: relative;        
+            @include pc-pad {
+                width: 23%;
+            }     
+            @include pad {
+                width: 48%;
                 margin-bottom: 32px;
                 img {
-                    width: 100%;
+                  width: 100%;
                 }
             }
+            @include mobile {
+                width: 345px;
+                margin: 0 auto; 
+                margin-bottom: 16px;
+            }            
         }
         .customer-list-title {
-            font-size: $text-ss;   
+            font-size: $text-ss;  
+            padding-top: 14px;
+            padding-bottom: 7px; 
         }                
         .customer-list-date {
             position: absolute;
@@ -199,25 +295,41 @@
     }
 }
 
-.contact {
-    background-color: $bc;  
+.contact {    
     @include pad {
         @include pad-p-y;
     }  
+    @include mobile {
+        @include mobile-p-y;
+    }
+    background-color: $bc;  
     .contact-info {
         width: 730px; 
+        margin: 0 auto;
+        @include pc-pad {
+            width: 65%;
+        }
         @include pad {
             width: 70%;
-        }   
+        }
+        @include mobile {
+            width: 90%;
+        }
         .title {
-            color: black;            
+            color: black;  
+            @include pad {
+                margin-bottom: 24px;
+            }          
         }
         p {
             font-size: $text-ms;
-            margin-top: 24px;
             margin-bottom: 20px;
             @include pad {
                 margin-bottom: 16px;
+            }
+            @include mobile {                
+                margin-bottom: 8px;
+                font-size: $text-base;
             }
         }
     }
@@ -235,23 +347,31 @@
             } 
         } 
         input, textarea {
-            padding-top: 12px;
-            padding-bottom: 14px;
-            padding-left: 16px;
+            padding: 14px 16px;
             margin-top: 4px;
+            border: solid 1px black;
+            background-color: #ffffff00;
         }
         input {
             height: 50px;
         }    
         textarea {
             height: 136px;
+            resize: none;
         }
     }    
     .checkbox-group {    
         display: flex;
+        justify-content: center;
         input {
             margin-right: 4px;        
+            vertical-align: middle;
             @include img-size(24px, 24px);
+        }
+        label {
+            @include mobile {
+                font-size: $text-ss;
+            }
         }
     }    
     .btn-confirm {
@@ -261,6 +381,9 @@
             @include img-size(350px, 54px);
             @include pad {
                 @include img-size(210px, 40px);
+            }
+            @include mobile {
+                @include img-size(165px, 36px);
             }
             color: $text-white;
             background-color: $text-red;

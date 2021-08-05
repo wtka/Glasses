@@ -1,19 +1,23 @@
 .container {
     width: 1110px;
     margin: 0 auto;   
-
-    @include pad {
+    @include pc-pad {
         width: 90%;
     }
 }
 
 .title {
-    font-size: 48px;
+    font-size: $text-lm;
     font-weight: bold;
     color: $text-darkRed;
     text-align: center; 
-
+    margin-bottom: 40px;
     @include pad {
         font-size: $text-sm;
+        margin-bottom: 32px;
+    }
+    @include mobile {
+        font-size: $text-ms;
+        margin-bottom: 20px;
     }
 }

@@ -9,8 +9,14 @@
     background-blend-mode: screen;
 }
 
+@mixin pc-pad {
+    @media (max-width: 1110px) {
+      @content;
+    }
+}
+
 @mixin pad {
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
         @content;
     }
 }
@@ -18,4 +24,20 @@
 @mixin pad-p-y {
 	padding-top: 40px;
 	padding-bottom: 56px;
+}
+
+@mixin pad-p-y-1 {
+	padding-top: 40px;
+	padding-bottom: 24px;
+}
+
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin mobile-p-y {
+	padding-top: 32px;
+	padding-bottom: 40px;
 }

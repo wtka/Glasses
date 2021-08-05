@@ -6,22 +6,55 @@
     padding: 30px 88px;
     @include pad {
         padding-right: 40px;
-        padding-left: 40px;
+        padding-left: 40px;        
+    }
+    @include mobile {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    h1 {
+        @include mobile {
+            margin: 0 auto;
+            padding: 10px 0;
+        }
     }
     .logo a {
         display: block;
         background-image: url(../images/logo.png);
-        @include img-size(80px, 49px);  
+        @include img-size(80px, 49px);          
+        @include mobile {
+            @include img-size(48px, 29px);
+            background-size: contain;
+        }
     }    
     .nav {
         display: flex;
+        @include mobile {
+            flex-wrap: wrap;
+            width: 100%;
+        }
         li {
-            margin-left: 44px;
+            @include mobile {
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+            }
         }        
-        a {
+        a {  
+            display: block; 
+            padding-left: 64px;         
             &:hover {
                 color: $hover-link;
             } 
+            @include pc-pad {
+                padding-left: 50px;
+            }
+            @include mobile {
+                padding-left: 0;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                border: 1px solid #fff;
+            }            
         }
     }
 }
