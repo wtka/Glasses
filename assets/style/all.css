@@ -135,7 +135,11 @@ a {
     display: block;
     background-image: url(../images/logo.png);
     width: 80px;
-    height: 49px; }
+    height: 49px;
+    text-indent: -99999px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-repeat: no-repeat; }
     @media (max-width: 767px) {
       .navbar .logo a {
         width: 48px;
