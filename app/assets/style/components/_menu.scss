@@ -1,0 +1,27 @@
+.menu {
+    @include mobile {
+        display: none;
+    }
+    margin-bottom: 40px;
+    background-color: $text-darkRed;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu-list {
+        display: flex;
+        li {
+            a {
+                display: block;
+                font-size: $text-ls;
+                color: white;
+                padding: 12px 0;
+                padding-right: 48px;
+                &:hover {
+                    color: $hover-link;
+                 }
+            }
+        }
+    }
+}

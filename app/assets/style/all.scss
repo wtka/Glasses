@@ -3,8 +3,12 @@
 @import "config/base";
 @import "helper/mixin";
 @import "config/utility";
+@import "components/pagination";
+@import "components/menu";
 @import "layout/navbar";
 @import "layout/footer";
-@import "layout/pagination";
 @import "page/index";
 @import "page/glasses";
+@import "page/location";
+@import "page/blog";
+@import "page/faq";
