@@ -1,8 +1,13 @@
 .container {
-    width: 1110px;
-    margin: 0 auto;   
-    @include pc-pad {
-        width: 90%;
+    max-width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;        
+    @include pad {
+        max-width: 720px;
+    }    
+    @include mobile {
+        max-width: 100%;
     }
 }
 

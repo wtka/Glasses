@@ -10,108 +10,113 @@
         @include mobile {
           margin-top: 28px;
         }
-    }
-    .blog-list {
-        li {
-            margin-bottom: 60px;
-            &:last-child {
-                margin-bottom: 96px;
-            }
-            @include pad {
-                margin-bottom: 24px;
-                &:last-child {
-                    margin-bottom: 64px;
-                }
-            }
-            @include mobile {
-                margin-bottom: 20px;
-                &:last-child {
-                    margin-bottom: 40px;
-                }
-            }
-        }
-        .blog-card-top {
-            display: flex;
-            justify-content: space-between;
-            @include mobile {
-                display: block;
-            }
-            img {
-                width: 50%;
-                @include mobile {
-                  width: 100%;
-                }
-            }
-        }
-        .blog-card-body {
-            width: 48%;
-            @include mobile {
-              width: 100%;
-            }
-            .blog-card-title {
-                margin-bottom: 2px;
-              font-size: $text-lm;
-              color: $text-darkRed;              
-              @include pad {
-                margin-bottom: 0;
-                font-size: $text-ls;                
-              }
-              @include mobile {
-                font-size: $text-base;
-              }
-            }
-        }
-        .blog-card-time {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-            h4 {
-              font-size: $text-ls;              
-              font-weight: bold;
-              @include pad {
-                font-size: $text-base;
-              }
-              @include mobile {
-                font-size: $text-ms;
-              }
-            }
-            p {
-              font-size: $text-base;              
-              @include pad {
-                font-size: $text-ms;
-              }
-            }
-        }
-        .blog-card-text {
-            @include mobile {
-              display: none;
-            }
-            p {
-              font-size: $text-ls;
-              color: $page-border-color;
-              @include pad {
-                display: inline;
-                font-size: $text-ms;
-              }
-            }
-            a {
-              display: block;              
-              text-align: right;
-              font-size: $text-xm;
-              color: $text-darkRed;
-              font-weight: bold;
-              &:hover {
-                color: $hover-link;
-              }
-              @include pad {
-                display: inline;
-                text-transform: lowercase;
-                font-size: $text-ms;
-                color: $page-border-color;
-              }
-            }
-        }
-    }
+    } 
 }
+
+.blog-list {
+  li {
+      margin-bottom: 60px;
+      &:last-child {
+          margin-bottom: 96px;
+      }
+      @include pad {
+          margin-bottom: 24px;
+          &:last-child {
+              margin-bottom: 64px;
+          }
+      }
+      @include mobile {
+          margin-bottom: 20px;
+          &:last-child {
+              margin-bottom: 40px;
+          }
+      }
+  }
+}
+
+.blog-card-top {
+  display: flex;
+  justify-content: space-between;
+  @include mobile {
+      display: block;
+  }
+  img {
+      width: 50%;
+      @include mobile {
+        width: 100%;
+      }
+  }
+}
+
+.blog-card-body {
+  width: 48%;
+  @include mobile {
+    width: 100%;
+  }
+  .blog-card-title {
+    margin-bottom: 2px;
+    font-size: $text-lm;
+    color: $text-darkRed;              
+    @include pad {
+      margin-bottom: 0;
+      font-size: $text-ls;                
+    }
+    @include mobile {
+      font-size: $text-base;
+    }
+  }
+}
+
+.blog-card-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  h4 {
+    font-size: $text-ls;              
+    font-weight: bold;
+    @include pad {
+      font-size: $text-base;
+    }
+    @include mobile {
+      font-size: $text-ms;
+    }
+  }
+  p {
+    font-size: $text-base;              
+    @include pad {
+      font-size: $text-ms;
+    }
+  }
+}
+
+.blog-card-text {
+  @include mobile {
+    display: none;
+  }
+  p {
+    font-size: $text-ls;
+    color: $page-border-color;
+    @include pad {
+      display: inline;
+      font-size: $text-ms;
+    }
+  }
+  a {
+    display: block;              
+    text-align: right;
+    font-size: $text-xm;
+    color: $text-darkRed;
+    font-weight: bold;
+    &:hover {
+      color: $hover-link;
+    }
+    @include pad {
+      display: inline;
+      text-transform: lowercase;
+      font-size: $text-ms;
+      color: $page-border-color;
+    }
+  }
+}    
 

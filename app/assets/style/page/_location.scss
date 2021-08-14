@@ -37,117 +37,125 @@
             border: 1px solid $store-select-border;      
         }
     }   
-    .location-list {
+}
+
+.location-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &::after {
+        content: "";
+        width: 30%;
+    }    
+} 
+
+.location-card {
+    width: 30%;
+    @include pad {
+        width: 48%;
+    }
+    @include mobile {
+        width: 100%;
+    }
+    img {
+        @include img-size(100%, 224px);
+        object-fit: cover;
+    }
+    &:nth-last-child(n + 3) {
+        margin-bottom: 32px;
+        @include pad {
+          margin-bottom: 20px;
+        }
+    }
+     &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.location-card-title, .location-card-text, .location-card-btn {
+    border: 1px solid $store-border-primary;
+}
+
+.location-card-title {
+    font-size: $text-xs;
+    color: $text-dark;
+    padding: 12px 0 12px 24px;
+    @include pad {
+        font-size: $text-base;
+    }
+}
+
+.location-card-text {
+    padding: 16px 27px;
+    li {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        &::after {
-            content: "";
-            width: 30%;
-        }
-        .location-card {
-            width: 30%;
+        align-items: center;
+        img {
+            @include img-size(18px, 18px);
             @include pad {
-                width: 48%;
-            }
-            @include mobile {
-                width: 100%;
-            }
-            img {
-                @include img-size(100%, 224px);
-            }
-            &:nth-last-child(n + 3) {
-                margin-bottom: 32px;
-                @include pad {
-                  margin-bottom: 20px;
-                }
-            }
-             &:not(:last-child) {
-                margin-bottom: 16px;
+                @include img-size(15px, 15px);
             }
         }
-        .location-card-title, .location-card-text, .location-card-btn {
-            border: 1px solid $store-border-primary;
-        }
-        .location-card-title {
-            font-size: $text-xs;
+        & ~ li {
+            margin-top: 8px;
+          }
+        p {
+            margin-left: 11px;
+            font-size: $text-ls;                    
             color: $text-dark;
-            padding: 12px 0 12px 24px;
             @include pad {
-                font-size: $text-base;
+              font-size: $text-ms;
             }
         }
-        .location-card-text {
-            padding: 16px 27px;
-            li {
-                display: flex;
-                align-items: center;
-                img {
-                    @include img-size(18px, 18px);
-                    @include pad {
-                        @include img-size(15px, 15px);
-                    }
-                }
-                & ~ li {
-                    margin-top: 8px;
-                  }
-                p {
-                    margin-left: 11px;
-                    font-size: $text-ls;                    
-                    color: $text-dark;
-                    @include pad {
-                      font-size: $text-ms;
-                    }
-                }
-            }
+    }
+}
+
+.location-card-btn {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 19px;
+    color: $text-white;
+    background-color: $text-black;
+    &:hover {
+        color: $hover-link;
+    }
+    @include pad {
+        font-size: $text-ms;
+    }
+}
+
+.location-card.store-card {
+    width: 40%;
+    margin-bottom: 0;
+    @include pad {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+        .location-card-top {
+          width: 55%;
+        }
+        .location-card-body {
+          width: 40%;
         }
         .location-card-btn {
-            display: block;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 19px;
-            color: $text-white;
-            background-color: $text-black;
-            &:hover {
-                color: $hover-link;
-            }
-            @include pad {
-                font-size: $text-ms;
-            }
+          display: none;
         }
-        .location-card.store-card {
-            width: 40%;
-            margin-bottom: 0;
-            @include pad {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 32px;
-                .location-card-top {
-                  width: 55%;
-                }
-                .location-card-body {
-                  width: 40%;
-                }
-                .location-card-btn {
-                  display: none;
-                }
-            }
-            @include mobile {
-                display: block;
-                .location-card-top, .location-card-body {
-                  width: 100%;
-                }
-                margin-bottom: 16px;
-            }
+    }
+    @include mobile {
+        display: block;
+        .location-card-top, .location-card-body {
+          width: 100%;
         }
-        .store-map {
-            width: 55%;
-            @include pad {
-                @include img-size(100%, 422px);
-            }
-        }
-    } 
-    
+        margin-bottom: 16px;
+    }
+}
+
+.store-map {
+    width: 55%;
+    @include pad {
+        @include img-size(100%, 422px);
+    }
 }

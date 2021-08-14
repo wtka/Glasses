@@ -9,12 +9,6 @@
     background-blend-mode: screen;
 }
 
-@mixin pc-pad {
-    @media (max-width: 1110px) {
-      @content;
-    }
-}
-
 @mixin pad {
     @media (max-width: 992px) {
         @content;

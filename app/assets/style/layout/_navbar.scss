@@ -17,8 +17,11 @@
             margin: 0 auto;
             padding: 10px 0;
         }
-    }
-    .logo a {
+    }    
+}
+
+.logo {
+    a {
         display: block;
         background-image: url(../images/logo.png);
         @include img-size(80px, 49px);  
@@ -28,36 +31,32 @@
             background-size: contain;
         }
     }    
-    .nav {
-        display: flex;
+}        
+
+.nav {
+    display: flex;
+    @include mobile {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    li {
         @include mobile {
-            flex-wrap: wrap;
-            width: 100%;
+            width: 50%;            
+            text-align: center;
         }
-        li {
-            @include mobile {
-                width: 50%;
-                margin: 0 auto;
-                text-align: center;
-            }
-        }        
-        a {  
-            display: block; 
-            padding-left: 64px;   
-            color: $text-white;      
-            &:hover {
-                color: $hover-link;
-            } 
-            @include pc-pad {
-                padding-left: 50px;
-            }
-            @include mobile {
-                padding-left: 0;
-                padding-top: 8px;
-                padding-bottom: 8px;
-                border: 1px solid #fff;
-            }            
-        }
+    }        
+    a {  
+        display: block; 
+        padding-left: 64px;   
+        color: $text-white;      
+        &:hover {
+            color: $hover-link;
+        }             
+        @include mobile {
+            padding-left: 0;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border: 1px solid #fff;
+        }            
     }
 }
-

@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  var $li = $('.glasses-header .menu li a');
+  var $li = $('.glasses-header .sub-menu li a');
   $li.click(function (event){
     if($(this).attr('href') == '#glasses-optical')
     {
