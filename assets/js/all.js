@@ -1,7 +1,7 @@
 "use strict";
 
 $(document).ready(function () {
-  var $li = $('.glasses-header .menu li a');
+  var $li = $('.glasses-header .sub-menu li a');
   $li.click(function (event) {
     if ($(this).attr('href') == '#glasses-optical') {
       $('#glasses-sunglasses').css('display', 'none');
